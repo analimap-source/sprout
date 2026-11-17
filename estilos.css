@@ -1,0 +1,422 @@
+/* ==========================================================
+   Sprout - Grupo Alquimia
+   Hoja de estilos compartida por index.html y salon.html
+   ========================================================== */
+
+:root {
+  --verde-oscuro: #1F4D3A;
+  --verde-medio: #2B6048;
+  --hoja: #2E7D4F;
+  --lima: #8CC63F;
+  --lima-claro: #DDEFC4;
+  --verde-palido: #D6EBC0;
+  --fondo: #F4F8EF;
+  --blanco: #FFFFFF;
+  --amarillo: #F2B84B;
+  --texto: #23332A;
+  --texto-suave: #4A5D50;
+  --texto-sobre-lima: #14301F;
+  --texto-sobre-amarillo: #3A2A00;
+  --borde: #CFE0BF;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'Nunito', system-ui, sans-serif;
+  color: var(--texto);
+  background: var(--fondo);
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-family: 'Fredoka', sans-serif;
+  color: var(--verde-oscuro);
+  margin: 0;
+}
+
+p { margin: 0; }
+
+a { color: var(--verde-oscuro); }
+a:hover { color: #0F2E21; }
+
+:focus-visible {
+  outline: 3px solid var(--amarillo);
+  outline-offset: 3px;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ---------- Botones ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 28px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-lima { background: var(--lima); color: var(--texto-sobre-lima); }
+.btn-lima:hover { background: #7DB82F; color: var(--texto-sobre-lima); }
+.btn-borde { border-color: var(--verde-oscuro); color: var(--verde-oscuro); background: transparent; }
+.btn-borde:hover { background: var(--lima-claro); }
+.btn-oscuro { background: var(--verde-oscuro); color: var(--blanco); font-size: 16px; padding: 0 22px; }
+.btn-oscuro:hover { background: #0F2E21; color: var(--blanco); }
+.btn-pequeno { min-height: 44px; font-size: 15px; padding: 0 20px; background: var(--blanco); }
+
+/* ---------- Encabezado ---------- */
+.encabezado {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.logo span {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--verde-oscuro);
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 28px;
+  font-weight: 700;
+}
+.menu a { text-decoration: none; }
+.menu a.btn-oscuro { color: var(--blanco); }
+
+.chip-salon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--blanco);
+  border-radius: 999px;
+  padding: 8px 18px 8px 8px;
+}
+.chip-salon .avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: var(--lima);
+  color: var(--texto-sobre-lima);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chip-salon strong { display: block; font-size: 15px; line-height: 1.2; }
+.chip-salon small { display: block; font-size: 13px; color: var(--texto-suave); line-height: 1.2; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 48px;
+  padding-top: 56px;
+  padding-bottom: 72px;
+}
+.hero-texto {
+  flex: 1 1 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.etiqueta {
+  align-self: flex-start;
+  background: var(--lima-claro);
+  color: var(--verde-oscuro);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 999px;
+}
+.hero h1 { font-size: 60px; line-height: 1.05; font-weight: 700; }
+.hero-texto > p { font-size: 20px; line-height: 1.55; color: #3B4F42; max-width: 540px; }
+.botones { display: flex; flex-wrap: wrap; gap: 14px; }
+
+.tarjeta-hero {
+  flex: 1 1 380px;
+  background: var(--verde-oscuro);
+  color: var(--blanco);
+  border-radius: 32px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.mascota-fila { display: flex; align-items: center; gap: 20px; }
+.mascota-fila h2 { color: var(--blanco); font-size: 26px; font-weight: 600; }
+.mascota-fila p { font-size: 16px; color: var(--verde-palido); }
+
+.mini-ranking {
+  background: var(--verde-medio);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.mini-ranking-titulo { display: flex; justify-content: space-between; align-items: baseline; }
+.mini-ranking-titulo strong { font-size: 16px; }
+.mini-ranking-titulo small { font-size: 13px; color: var(--verde-palido); }
+.fila-barra { display: flex; align-items: center; gap: 12px; }
+.fila-barra .pos { font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 20px; width: 24px; color: var(--amarillo); }
+.fila-barra .nombre { font-weight: 700; width: 48px; }
+.fila-barra .pts { font-weight: 700; width: 60px; text-align: right; }
+.barra { flex: 1; height: 12px; background: var(--verde-oscuro); border-radius: 999px; overflow: hidden; }
+.barra i { display: block; height: 12px; background: var(--lima); border-radius: 999px; }
+.ancho-100 { width: 100%; }
+.ancho-85 { width: 85%; }
+.ancho-75 { width: 75%; }
+
+/* ---------- Secciones ---------- */
+.seccion { padding-top: 80px; padding-bottom: 80px; }
+.seccion-blanca { background: var(--blanco); padding: 72px 0; }
+.seccion-verde { background: var(--verde-oscuro); padding: 80px 0; }
+.seccion-lima { background: var(--lima-claro); padding: 80px 0; }
+
+.titulo-seccion { font-size: 40px; font-weight: 600; text-align: center; margin-bottom: 8px; }
+.subtitulo-seccion { font-size: 18px; color: var(--texto-suave); text-align: center; margin-bottom: 40px; }
+.seccion-verde .titulo-seccion { color: var(--blanco); text-align: left; }
+.seccion-verde .subtitulo-seccion { color: var(--verde-palido); text-align: left; margin-bottom: 36px; }
+
+.dos-columnas { display: flex; flex-wrap: wrap; gap: 48px; align-items: center; }
+.dos-columnas > div { flex: 1 1 380px; }
+.texto-largo { display: flex; flex-direction: column; gap: 16px; }
+.texto-largo h2 { font-size: 38px; font-weight: 600; }
+.texto-largo p { font-size: 18px; line-height: 1.6; color: #3B4F42; }
+.seccion-lima .texto-largo h2 { font-size: 40px; }
+.seccion-lima .texto-largo p { color: #2F4A3A; }
+
+.cuadricula { display: grid; gap: 20px; }
+.cuadricula-4 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.cuadricula-3 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.cuadricula-retos { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 16px; }
+.cuadricula-espacios { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
+
+.espacio { background: var(--fondo); border-radius: 20px; padding: 22px; }
+.espacio h3 { font-size: 22px; font-weight: 600; margin-bottom: 6px; }
+.espacio p { font-size: 15px; color: var(--texto-suave); }
+
+/* ---------- Tarjetas ---------- */
+.tarjeta {
+  background: var(--blanco);
+  border-radius: 24px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.tarjeta h3 { font-size: 22px; font-weight: 600; }
+.tarjeta p { font-size: 16px; line-height: 1.55; color: var(--texto-suave); }
+.tarjeta-rol { padding: 32px; gap: 14px; }
+.tarjeta-rol h3 { font-size: 24px; }
+
+.numero {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  background: var(--lima);
+  color: var(--texto-sobre-lima);
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Retos ---------- */
+.reto-card {
+  background: var(--blanco);
+  border-radius: 20px;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.puntos {
+  flex: none;
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: var(--amarillo);
+  color: var(--texto-sobre-amarillo);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.puntos b { font-family: 'Fredoka', sans-serif; font-size: 26px; line-height: 1; }
+.puntos span { font-weight: 700; font-size: 12px; }
+.reto-card h3 { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 18px; }
+.reto-card p { font-size: 15px; color: var(--texto-suave); }
+
+/* ---------- Posiciones ---------- */
+.panel-ranking {
+  background: var(--blanco);
+  border-radius: 28px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.panel-ranking-titulo { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 8px; }
+.panel-ranking-titulo h3 { font-size: 22px; font-weight: 600; }
+.panel-ranking-titulo small { font-size: 14px; color: var(--texto-suave); }
+.fila-ranking {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  background: var(--fondo);
+  border-radius: 16px;
+}
+.fila-ranking.primero { background: var(--lima-claro); }
+.fila-ranking .pos { font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 24px; color: var(--verde-oscuro); width: 28px; }
+.fila-ranking .nombre { flex: 1; font-weight: 700; font-size: 18px; }
+.fila-ranking .pts { font-weight: 700; font-size: 18px; color: var(--verde-oscuro); }
+
+/* ---------- Cronograma ---------- */
+.semana {
+  background: var(--blanco);
+  border-top: 6px solid var(--lima);
+  border-radius: 0 0 20px 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.semana small { font-weight: 700; font-size: 14px; color: var(--hoja); text-transform: uppercase; letter-spacing: 0.06em; }
+.semana h3 { font-size: 22px; font-weight: 600; }
+.semana p { font-size: 16px; color: var(--texto-suave); }
+
+/* ---------- Llamado final ---------- */
+.llamado {
+  background: var(--verde-oscuro);
+  border-radius: 32px;
+  padding: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.llamado div { flex: 1 1 420px; }
+.llamado h2 { color: var(--blanco); font-size: 34px; font-weight: 600; margin-bottom: 10px; }
+.llamado p { font-size: 17px; color: var(--verde-palido); }
+.espacio-final { padding-bottom: 80px; }
+
+.pie {
+  border-top: 1px solid var(--borde);
+  padding: 28px 40px;
+  text-align: center;
+  font-size: 15px;
+  color: var(--texto-suave);
+}
+
+/* ==========================================================
+   Panel del salón (salon.html)
+   ========================================================== */
+.panel { display: flex; flex-direction: column; gap: 32px; padding-top: 24px; padding-bottom: 72px; }
+
+.bienvenida {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 28px;
+  background: var(--verde-oscuro);
+  color: var(--blanco);
+  border-radius: 32px;
+  padding: 32px 36px;
+}
+.bienvenida-texto { flex: 1 1 280px; display: flex; flex-direction: column; gap: 6px; }
+.bienvenida h1 { color: var(--blanco); font-size: 34px; font-weight: 600; }
+.bienvenida p { font-size: 17px; color: var(--verde-palido); }
+.resumen { display: flex; flex-wrap: wrap; gap: 14px; }
+.dato {
+  background: var(--verde-medio);
+  border-radius: 20px;
+  padding: 16px 22px;
+  min-width: 120px;
+}
+.dato b { display: block; font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 32px; color: var(--amarillo); }
+.dato span { font-size: 14px; color: var(--verde-palido); }
+
+.panel-cuerpo { display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start; }
+.lista-retos { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+.lista-retos-titulo { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; }
+.lista-retos-titulo h2 { font-size: 30px; font-weight: 600; }
+.lista-retos-titulo p { font-size: 15px; color: var(--texto-suave); }
+
+.reto {
+  background: var(--blanco);
+  border-radius: 22px;
+  padding: 20px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+}
+.reto .puntos { width: 60px; height: 60px; border-radius: 16px; }
+.reto .puntos b { font-size: 24px; }
+.reto-info { flex: 1 1 220px; display: flex; flex-direction: column; gap: 4px; }
+.reto-info h3 { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 18px; }
+.reto-detalle { font-size: 15px; color: var(--texto-suave); }
+.reto-acciones { display: flex; align-items: center; gap: 12px; }
+
+.estado { font-weight: 700; font-size: 14px; padding: 8px 14px; border-radius: 999px; }
+.estado-ok { background: var(--lima-claro); color: var(--verde-oscuro); }
+.estado-revision { background: #FFE9B8; color: #5A3E00; }
+.estado-pendiente { background: #E6EAE4; color: #3B4F42; }
+
+.lateral { flex: 1 1 320px; display: flex; flex-direction: column; gap: 20px; }
+.lateral .panel-ranking { border-radius: 24px; padding: 24px; }
+.lateral .fila-ranking { padding: 12px 14px; border-radius: 14px; }
+.lateral .fila-ranking .pos { font-size: 22px; width: 24px; }
+.lateral .fila-ranking .nombre { font-size: 17px; }
+.lateral .fila-ranking .pts { font-size: 16px; }
+.recuerda { background: var(--lima-claro); border-radius: 24px; padding: 24px; display: flex; flex-direction: column; gap: 10px; }
+.recuerda h3 { font-size: 20px; font-weight: 600; }
+.recuerda p { font-size: 16px; line-height: 1.55; color: #2F4A3A; }
+
+/* ---------- Pantallas pequeñas ---------- */
+@media (max-width: 720px) {
+  .contenedor { padding: 0 20px; }
+  .hero { gap: 32px; padding-top: 32px; padding-bottom: 48px; }
+  .hero h1 { font-size: 40px; }
+  .hero-texto > p { font-size: 18px; }
+  .titulo-seccion, .seccion-lima .texto-largo h2 { font-size: 32px; }
+  .seccion, .seccion-verde, .seccion-lima { padding-top: 56px; padding-bottom: 56px; }
+  .llamado { padding: 32px 24px; }
+  .llamado h2 { font-size: 28px; }
+  .menu { gap: 18px; }
+  .bienvenida { padding: 24px; }
+  .bienvenida h1 { font-size: 28px; }
+  .cuadricula-3, .cuadricula-retos { grid-template-columns: 1fr; }
+}

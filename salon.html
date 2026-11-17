@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sprout - Panel del salón</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="contenedor encabezado">
+    <a class="logo" href="index.html" aria-label="Sprout, volver al inicio">
+      <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+        <circle cx="18" cy="21" r="12" fill="#8CC63F"/>
+        <path d="M18 10C18 4 13 2 9 3c0 5 3 8 9 7z" fill="#1F4D3A"/>
+        <path d="M18 10c0-6 5-8 9-7 0 5-3 8-9 7z" fill="#2E7D4F"/>
+      </svg>
+      <span>Sprout</span>
+    </a>
+    <div class="chip-salon">
+      <div class="avatar">3A</div>
+      <div>
+        <strong>Salón 3.º A</strong>
+        <small>Delegada ecológica</small>
+      </div>
+    </div>
+  </header>
+
+  <main class="contenedor panel">
+
+    <!-- BIENVENIDA Y RESUMEN -->
+    <section class="bienvenida">
+      <svg width="96" height="96" viewBox="0 0 104 104" role="img" aria-label="Sprout, la mascota, contenta">
+        <path d="M52 30C52 12 38 6 26 9c1 15 10 23 26 21z" fill="#B8E07A"/>
+        <path d="M52 30c0-18 14-24 26-21-1 15-10 23-26 21z" fill="#6FBF73"/>
+        <circle cx="52" cy="64" r="34" fill="#8CC63F"/>
+        <circle cx="40" cy="60" r="5" fill="#14301F"/>
+        <circle cx="64" cy="60" r="5" fill="#14301F"/>
+        <path d="M42 74q10 9 20 0" fill="none" stroke="#14301F" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="32" cy="72" r="5" fill="#F2B84B" opacity="0.8"/>
+        <circle cx="72" cy="72" r="5" fill="#F2B84B" opacity="0.8"/>
+      </svg>
+      <div class="bienvenida-texto">
+        <h1>¡Buen trabajo, 3.º A!</h1>
+        <p>Van en primer lugar. ¡Sigan participando entre todas!</p>
+      </div>
+      <div class="resumen">
+        <div class="dato"><b>85</b><span>Puntos verificados</span></div>
+        <div class="dato"><b>1.º</b><span>Posición</span></div>
+        <div class="dato"><b id="contador-revision">1</b><span>Retos en revisión</span></div>
+      </div>
+    </section>
+
+    <div class="panel-cuerpo">
+
+      <!-- RETOS DE LA SEMANA -->
+      <section class="lista-retos" aria-labelledby="titulo-retos">
+        <div class="lista-retos-titulo">
+          <h2 id="titulo-retos">Retos de la semana</h2>
+          <p>Los puntos cuentan cuando un auxiliar los verifica</p>
+        </div>
+
+        <article class="reto">
+          <div class="puntos"><b>5</b><span>puntos</span></div>
+          <div class="reto-info">
+            <h3>Mantener limpio el salón</h3>
+            <p class="reto-detalle">Verificado por un auxiliar.</p>
+          </div>
+          <div class="reto-acciones"><span class="estado estado-ok">Verificado</span></div>
+        </article>
+
+        <article class="reto">
+          <div class="puntos"><b>5</b><span>puntos</span></div>
+          <div class="reto-info">
+            <h3>Residuos en el tacho correcto</h3>
+            <p class="reto-detalle">Verificado por un auxiliar.</p>
+          </div>
+          <div class="reto-acciones"><span class="estado estado-ok">Verificado</span></div>
+        </article>
+
+        <article class="reto">
+          <div class="puntos"><b>7</b><span>puntos</span></div>
+          <div class="reto-info">
+            <h3>Patio sin basura</h3>
+            <p class="reto-detalle">Evidencia enviada, esperando revisión.</p>
+          </div>
+          <div class="reto-acciones"><span class="estado estado-revision">En revisión</span></div>
+        </article>
+
+        <article class="reto">
+          <div class="puntos"><b>8</b><span>puntos</span></div>
+          <div class="reto-info">
+            <h3>Cuidar las áreas verdes</h3>
+            <p class="reto-detalle">Envía una foto como evidencia.</p>
+          </div>
+          <div class="reto-acciones">
+            <span class="estado estado-pendiente">Por hacer</span>
+            <button type="button" class="btn btn-borde btn-pequeno" data-enviar>Enviar evidencia</button>
+          </div>
+        </article>
+
+        <article class="reto">
+          <div class="puntos"><b>10</b><span>puntos</span></div>
+          <div class="reto-info">
+            <h3>Jornada de limpieza</h3>
+            <p class="reto-detalle">Participa con todo el salón.</p>
+          </div>
+          <div class="reto-acciones">
+            <span class="estado estado-pendiente">Por hacer</span>
+            <button type="button" class="btn btn-borde btn-pequeno" data-enviar>Enviar evidencia</button>
+          </div>
+        </article>
+      </section>
+
+      <!-- LATERAL -->
+      <aside class="lateral">
+        <div class="panel-ranking">
+          <div class="panel-ranking-titulo">
+            <h3>Posiciones</h3>
+            <small>Datos de ejemplo</small>
+          </div>
+          <div class="fila-ranking primero"><span class="pos">1</span><span class="nombre">Salón 3.º A</span><span class="pts">85 pts</span></div>
+          <div class="fila-ranking"><span class="pos">2</span><span class="nombre">Salón 3.º B</span><span class="pts">72 pts</span></div>
+          <div class="fila-ranking"><span class="pos">3</span><span class="nombre">Salón 3.º C</span><span class="pts">64 pts</span></div>
+        </div>
+        <div class="recuerda">
+          <h3>Recuerda</h3>
+          <p>Competimos con respeto. Lo más importante es que todas cuidemos el colegio, no solo ganar.</p>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="pie">Sprout · Proyecto del grupo Alquimia · Prototipo de página web</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
